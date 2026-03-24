@@ -35,7 +35,7 @@ impl ContextInner {
     pub fn new() -> Self {
         let mut networks = HashMap::new();
         networks.insert(String::from("mainnet"), Network::mainnet());
-        networks.insert(String::from("goerli"), Network::goerli());
+        networks.insert(String::from("sepolia"), Network::sepolia());
         networks.insert(String::from("anvil"), Network::anvil());
 
         Self {
