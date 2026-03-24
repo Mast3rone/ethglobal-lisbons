@@ -23,20 +23,22 @@ impl Network {
             ws_url: None,
             currency: String::from("ETH"),
             decimals: 18,
-            // listener: None,
         }
     }
 
-    pub fn goerli() -> Self {
+    pub fn sepolia() -> Self {
         Self {
-            name: String::from("goerli"),
-            chain_id: 5,
+            name: String::from("sepolia"),
+            chain_id: 11155111,
             dev: false,
-            http_url: String::from("https://rpc.ankr.com/eth_goerli"),
-            ws_url: None,
+            http_url: String::from(
+                "https://eth-sepolia.g.alchemy.com/v2/-wxu38OgTIonhR-yNbXPj4f_6eMP_fCZ",
+            ),
+            ws_url: Some(String::from(
+                "wss://eth-sepolia.g.alchemy.com/v2/-wxu38OgTIonhR-yNbXPj4f_6eMP_fCZ",
+            )),
             currency: String::from("ETH"),
             decimals: 18,
-            // listener: None,
         }
     }
 
@@ -49,7 +51,6 @@ impl Network {
             ws_url: Some(String::from("ws://localhost:8545")),
             currency: String::from("ETH"),
             decimals: 18,
-            // listener: None,
         }
     }
 
